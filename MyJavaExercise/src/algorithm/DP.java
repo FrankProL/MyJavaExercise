@@ -2,7 +2,7 @@ package algorithm;
 
 import java.util.ArrayList;
 
-/**
+/** 
  * 1,2,5
  * 11元
  * 如何输出所有的方式？
@@ -13,7 +13,7 @@ public class DP {
 	public static void main(String[] args) {
 		System.out.println(F(6));
 	}
-	
+//	
 	public static int F(int n){
 //		ArrayList<String> list=new ArrayList<String>();
 //		if(n==1){
