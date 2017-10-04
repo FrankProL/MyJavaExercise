@@ -17,7 +17,7 @@ public class Main {
 		urlFile = "http://dl.google.com/android/android-sdk_r12-windows.zip";
 		//urlFile = "http://www.fiddlertool.com/dl/FiddlerCoreDocsSetup.exe";
 		threadNum = 9;// 要同时下载的线程数
-		localFileAddress = "d://multiDownTest//";
+		localFileAddress = "f://test";
 	}
 
 	private void start() {

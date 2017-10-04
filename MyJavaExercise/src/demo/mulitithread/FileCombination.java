@@ -27,7 +27,8 @@ public class FileCombination extends Thread {
 	}
 
 	/**
-	 *    *    * @param sFileName 任一一个拆分文件名    * @return 原文件名   
+	 * @param sFileName 任一一个拆分文件名    
+	 * @return 原文件名   
 	 */
 	private String getRealName(String sFileName) {
 		StringTokenizer st = new StringTokenizer(sFileName, ".");
@@ -35,7 +36,9 @@ public class FileCombination extends Thread {
 	}
 
 	/**
-	 *    * 取得指定拆分文件模块的文件大小    * @param FileName 拆分的文件名    * @return   
+	 * 取得指定拆分文件模块的文件大小   
+	 * @param FileName拆分的文件名   
+	 * @return   
 	 */
 	private long getFileSize(String FileName) {
 		FileName = srcDirectory + "//" + FileName;
@@ -43,7 +46,8 @@ public class FileCombination extends Thread {
 	}
 
 	/**
-	 *    * 生成一些属性，做初使化    * @param drictory 拆分文件目录   
+	 * 生成一些属性，做初使化    
+	 * @param drictory 拆分文件目录   
 	 */
 	private void getFileAttribute(String drictory) {
 		File file = new File(drictory);
@@ -63,7 +67,8 @@ public class FileCombination extends Thread {
 	}
 
 	/**
-	 *    * 合并文件：利用随机文件读写    * @return true为成功合并文件
+	 * 合并文件：利用随机文件读写    
+	 * @return true为成功合并文件
 	 */
 	private boolean CombFile() {
 		RandomAccessFile raf = null;
