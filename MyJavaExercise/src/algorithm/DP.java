@@ -13,7 +13,7 @@ public class DP {
 	public static void main(String[] args) {
 		System.out.println(F(6));
 	}
-//	
+
 	public static int F(int n){
 //		ArrayList<String> list=new ArrayList<String>();
 //		if(n==1){
