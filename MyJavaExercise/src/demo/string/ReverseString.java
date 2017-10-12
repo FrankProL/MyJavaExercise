@@ -1,4 +1,4 @@
-package datetime.timer.schedule;
+package demo.string;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,7 +10,7 @@ import java.util.List;
  * @author Frank
  *
  */
-public class TestString {
+public class ReverseString {
 	public static void main(String[] args) {
 		String s= "hello";
 		// 借助 StringBuilder 的 reverse()方法
