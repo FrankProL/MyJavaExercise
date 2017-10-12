@@ -8,11 +8,17 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-public class TimerTest {
+public class ExecuteAtOclock {
+	/**
+	 * 定时执行方法
+	 * 执行runnable中的任务
+	 */
 	public static void executeEightAtNightPerDay() {  
+		
 	    ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);  
+	    
 	    long oneDay = 24 * 60 * 60 * 1000;  
-	    long initDelay  = getTimeMillis("18:21:00") - System.currentTimeMillis();  
+	    long initDelay  = getTimeMillis("17:22:00") - System.currentTimeMillis();  
 	    initDelay = initDelay > 0 ? initDelay : oneDay + initDelay;  
 	  
 	    Runnable runnable = new Runnable() {  
@@ -29,7 +35,6 @@ public class TimerTest {
 	            oneDay,  
 	            TimeUnit.MILLISECONDS);  
 	}  
-
 	/** 
 	 * 获取指定时间对应的毫秒数 
 	 * @param time "HH:mm:ss" 
@@ -46,28 +51,12 @@ public class TimerTest {
 	    }  
 	    return 0;  
 	} 
-	
+	/**
+	 * main方法中调用定时任务
+	 * @param args
+	 */
 	public static void main(String[] args) {
-		TimerTest.executeEightAtNightPerDay();
+		ExecuteAtOclock.executeEightAtNightPerDay();
 		System.out.println(new Date());
-//		ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);  
-//	    long oneDay = 24 * 60 * 60 * 1000;  
-//	    long initDelay  = getTimeMillis("17:42:00") - System.currentTimeMillis();  
-//	    initDelay = initDelay > 0 ? initDelay : oneDay + initDelay;  
-//	  
-//	    Runnable runnable = new Runnable() {  
-//            public void run() {  
-//                // task to run goes here  
-//                System.out.println("Hello !!"+new Date());  
-//               
-//            }  
-//        }; 
-//	    
-//	    
-//	    executor.scheduleAtFixedRate(  
-//	            runnable,  
-//	            initDelay,  
-//	            oneDay,  
-//	            TimeUnit.MILLISECONDS);  
 	}
 }
