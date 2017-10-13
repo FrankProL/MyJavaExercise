@@ -3,7 +3,13 @@ package datetime.timer.schedule;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
-
+/**
+ * ScheduledExecutorService
+ * scheduExec.schedule
+ * 延时执行一次
+ * @author Frank
+ *
+ */
 public class ScheduledExecutorTest {
 	private  ScheduledExecutorService scheduExec;  
     

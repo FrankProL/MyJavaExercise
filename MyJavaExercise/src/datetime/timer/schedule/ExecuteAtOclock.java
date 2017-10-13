@@ -7,7 +7,12 @@ import java.util.Date;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
-
+/**
+ * 每天定时几点执行
+ * ScheduledExecutorService
+ * @author Frank
+ *http://blog.csdn.net/langzi7758521/article/details/53424195
+ */
 public class ExecuteAtOclock {
 	/**
 	 * 定时执行方法
