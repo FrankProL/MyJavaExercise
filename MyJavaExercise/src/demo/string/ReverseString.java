@@ -16,12 +16,18 @@ public class ReverseString {
 		// 借助 StringBuilder 的 reverse()方法
 		StringBuilder str= new StringBuilder(s).reverse();
 		System.out.println(str);
+		
+		
+		String str1 = "I love java";  
+        System.out.println(swapWords(str1));
+        
+        SelfDefReverse();
 	}
-}
-
-// i love java 输出 java love i
-class StringReverse {  
-    public void swap(char[] arr, int begin, int end) {  
+	
+	/**
+	 * i love java 输出 java love i
+	 */
+	public static void swap(char[] arr, int begin, int end) {  
         while(begin < end) {  
             char temp = arr[begin];  
             arr[begin] = arr[end];  
@@ -31,7 +37,7 @@ class StringReverse {
         }  
     }  
     //I love java  
-    public String swapWords(String str) {  
+    public static String swapWords(String str) {  
         char[] arr = str.toCharArray();  
         swap(arr, 0, arr.length - 1);  
         int begin = 0;  
@@ -43,16 +49,11 @@ class StringReverse {
         }  
         return new String(arr);  
     }  
-      
-    public static void main(String[] args) {  
-        String str = "I love java";  
-        System.out.println(new StringReverse().swapWords(str));  
-    }  
-}  
-
-class Main {  
-	  
-    public static void main(String[] args) {  
+	
+    /**
+     * 自定义借助Collections.reverse(list)方法实现字符串反转
+     */
+    public static void SelfDefReverse() {  
         String str = "i love java";  
           
         String[] sArr = str.split(" ");//I love java  
@@ -70,5 +71,5 @@ class Main {
         for(String word:list){  
             System.out.print(word+" ");  
         }  
-    }  
-}  
+    } 
+}
